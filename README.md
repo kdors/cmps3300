@@ -1,5 +1,4 @@
-# cmps3300
-ROTSee
+# ROTSee
 
 Developers: Kennedy Dorsey, Jessica Hotsko, Riley Juenemann, Olivia Nye
 
