@@ -1,0 +1,135 @@
+  [1m[35m (1.7ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (23.7ms)[0m  [1m[35mCREATE TABLE "schema_migrations" ("version" varchar NOT NULL PRIMARY KEY)[0m
+  [1m[35m (14.4ms)[0m  [1m[35mCREATE TABLE "ar_internal_metadata" ("key" varchar NOT NULL PRIMARY KEY, "value" varchar, "created_at" datetime(6) NOT NULL, "updated_at" datetime(6) NOT NULL)[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Migrating to CreateCadets (20190930230122)
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.3ms)[0m  [1m[35mCREATE TABLE "cadets" ("id" integer PRIMARY KEY AUTOINCREMENT NOT NULL, "cadetID" integer, "lastName" varchar, "firstName" varchar, "email" varchar, "phoneNumber" varchar, "school" varchar, "position" varchar, "course" varchar, "gradYear" integer, "flight" varchar, "username" varchar, "password" varchar, "created_at" datetime(6) NOT NULL, "updated_at" datetime(6) NOT NULL)[0m
+  [1m[36mprimary::SchemaMigration Create (0.1ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20190930230122"]]
+  [1m[35m (15.4ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.1ms)[0m  [1m[34mSELECT "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? LIMIT ?[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mActiveRecord::InternalMetadata Create (0.2ms)[0m  [1m[32mINSERT INTO "ar_internal_metadata" ("key", "value", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["key", "environment"], ["value", "development"], ["created_at", "2019-10-01 19:23:45.528417"], ["updated_at", "2019-10-01 19:23:45.528417"]]
+  [1m[35m (13.1ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mCadet Create (0.3ms)[0m  [1m[32mINSERT INTO "cadets" ("cadetID", "lastName", "firstName", "email", "phoneNumber", "school", "position", "course", "gradYear", "flight", "username", "password", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["cadetID", 1], ["lastName", "Nye1"], ["firstName", "Olivia"], ["email", "onye@tulane.edu"], ["phoneNumber", "8477701060"], ["school", "Tulane University"], ["position", "Flight Commander"], ["course", "POC"], ["gradYear", 2020], ["flight", "Alpha"], ["username", "onye"], ["password", "password"], ["created_at", "2019-10-01 19:24:23.504439"], ["updated_at", "2019-10-01 19:24:23.504439"]]
+  [1m[35m (14.4ms)[0m  [1m[36mcommit transaction[0m
+Started GET "/" for 129.81.6.143 at 2019-10-01 19:24:34 +0000
+Cannot render console from 129.81.6.143! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by CadetsController#index as HTML
+  Rendering cadets/index.html.erb within layouts/application
+  [1m[36mCadet Load (0.2ms)[0m  [1m[34mSELECT "cadets".* FROM "cadets"[0m
+  ↳ app/views/cadets/index.html.erb:23
+  Rendered cadets/index.html.erb within layouts/application (Duration: 33.5ms | Allocations: 11288)
+[Webpacker] Compiling…
+[Webpacker] Compiled all packs in /home/ubuntu/environment/ROTSee/public/packs
+Completed 200 OK in 5884ms (Views: 5872.6ms | ActiveRecord: 1.6ms | Allocations: 1276425)
+
+
+Started GET "/" for 129.81.6.143 at 2019-10-01 19:30:24 +0000
+Cannot render console from 129.81.6.143! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by CadetsController#index as HTML
+  Rendering cadets/index.html.erb within layouts/application
+  [1m[36mCadet Load (0.2ms)[0m  [1m[34mSELECT "cadets".* FROM "cadets"[0m
+  ↳ app/views/cadets/index.html.erb:23
+  Rendered cadets/index.html.erb within layouts/application (Duration: 25.3ms | Allocations: 11157)
+Completed 200 OK in 834ms (Views: 824.5ms | ActiveRecord: 0.8ms | Allocations: 1256815)
+
+
+Started GET "/" for 129.81.6.143 at 2019-10-01 20:08:34 +0000
+Cannot render console from 129.81.6.143! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by CadetsController#index as HTML
+  Rendering cadets/index.html.erb within layouts/application
+  [1m[36mCadet Load (0.2ms)[0m  [1m[34mSELECT "cadets".* FROM "cadets"[0m
+  ↳ app/views/cadets/index.html.erb:23
+  Rendered cadets/index.html.erb within layouts/application (Duration: 14.5ms | Allocations: 11126)
+  Rendered application/_favicon.html.erb (Duration: 9.5ms | Allocations: 4322)
+Completed 200 OK in 945ms (Views: 926.8ms | ActiveRecord: 1.0ms | Allocations: 1279974)
+
+
+  [1m[35m (1.6ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mCadet Create (1.5ms)[0m  [1m[32mINSERT INTO "cadets" ("cadetID", "lastName", "firstName", "email", "phoneNumber", "school", "position", "course", "gradYear", "flight", "username", "password", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["cadetID", 0], ["lastName", "Nye"], ["firstName", "Olivia"], ["email", "onye@tulane.edu"], ["phoneNumber", "8477701060"], ["school", "Tulane University"], ["position", "Flight Commander"], ["course", "POC"], ["gradYear", 2020], ["flight", "Alpha"], ["username", "onye"], ["password", "password"], ["created_at", "2019-10-03 19:15:35.988246"], ["updated_at", "2019-10-03 19:15:35.988246"]]
+  [1m[35m (17.9ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mCadet Create (0.2ms)[0m  [1m[32mINSERT INTO "cadets" ("cadetID", "lastName", "firstName", "email", "phoneNumber", "school", "position", "course", "gradYear", "flight", "username", "password", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["cadetID", 1], ["lastName", "Juenemann"], ["firstName", "Riley"], ["email", "rjuenemann@tulane.edu"], ["phoneNumber", "7204288077"], ["school", "Tulane University"], ["position", "Flight Commander"], ["course", "GMC"], ["gradYear", 2021], ["flight", "Bravo"], ["username", "rjuenemann"], ["password", "password"], ["created_at", "2019-10-03 19:15:36.011680"], ["updated_at", "2019-10-03 19:15:36.011680"]]
+  [1m[35m (13.3ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mCadet Create (0.2ms)[0m  [1m[32mINSERT INTO "cadets" ("cadetID", "lastName", "firstName", "email", "phoneNumber", "school", "position", "course", "gradYear", "flight", "username", "password", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["cadetID", 2], ["lastName", "Dorset"], ["firstName", "Kennedy"], ["email", "kdorsey3@tulane.edu"], ["phoneNumber", "5046384147"], ["school", "Tulane University"], ["position", "Flight Commander"], ["course", "POC"], ["gradYear", 2020], ["flight", "Alpha"], ["username", "kdorsey3"], ["password", "password"], ["created_at", "2019-10-03 19:15:36.029720"], ["updated_at", "2019-10-03 19:15:36.029720"]]
+  [1m[35m (12.7ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mCadet Create (0.7ms)[0m  [1m[32mINSERT INTO "cadets" ("cadetID", "lastName", "firstName", "email", "phoneNumber", "school", "position", "course", "gradYear", "flight", "username", "password", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["cadetID", 3], ["lastName", "Hotsko"], ["firstName", "Jessica"], ["email", "jhotsko@tulane.edu"], ["phoneNumber", "4109243357"], ["school", "Tulane University"], ["position", "Flight Commander"], ["course", "GMC"], ["gradYear", 2020], ["flight", "Bravo"], ["username", "jhotsko"], ["password", "password"], ["created_at", "2019-10-03 19:15:36.055511"], ["updated_at", "2019-10-03 19:15:36.055511"]]
+  [1m[35m (13.1ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mCadet Create (0.3ms)[0m  [1m[32mINSERT INTO "cadets" ("cadetID", "lastName", "firstName", "email", "phoneNumber", "school", "position", "course", "gradYear", "flight", "username", "password", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["cadetID", 4], ["lastName", "Dewitt"], ["firstName", "Marie"], ["email", "mdewitt@tulane.edu"], ["phoneNumber", "1230001234"], ["school", "Tulane University"], ["position", "Flight Captain"], ["course", "POC"], ["gradYear", 2020], ["flight", "Alpha"], ["username", "mdewitt"], ["password", "password"], ["created_at", "2019-10-03 19:15:36.082396"], ["updated_at", "2019-10-03 19:15:36.082396"]]
+  [1m[35m (12.6ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mCadet Create (0.2ms)[0m  [1m[32mINSERT INTO "cadets" ("cadetID", "lastName", "firstName", "email", "phoneNumber", "school", "position", "course", "gradYear", "flight", "username", "password", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["cadetID", 5], ["lastName", "Clark"], ["firstName", "Kyra"], ["email", "kclark7@tulane.edu"], ["phoneNumber", "4560004567"], ["school", "Tulane University"], ["position", "Cadet"], ["course", "GMC"], ["gradYear", 2020], ["flight", "Bravo"], ["username", "kclark7"], ["password", "pwd"], ["created_at", "2019-10-03 19:15:36.106556"], ["updated_at", "2019-10-03 19:15:36.106556"]]
+  [1m[35m (12.4ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mCadet Create (0.8ms)[0m  [1m[32mINSERT INTO "cadets" ("cadetID", "lastName", "firstName", "email", "phoneNumber", "school", "position", "course", "gradYear", "flight", "username", "password", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["cadetID", 6], ["lastName", "Westlake"], ["firstName", "Alexa"], ["email", "awestlak@tulane.edu"], ["phoneNumber", "7890006789"], ["school", "Tulane University"], ["position", "Commander"], ["course", "POC"], ["gradYear", 2020], ["flight", "Bravo"], ["username", "awestlak"], ["password", "pwd1"], ["created_at", "2019-10-03 19:15:36.130756"], ["updated_at", "2019-10-03 19:15:36.130756"]]
+  [1m[35m (12.8ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mCadet Create (0.2ms)[0m  [1m[32mINSERT INTO "cadets" ("cadetID", "lastName", "firstName", "email", "phoneNumber", "school", "position", "course", "gradYear", "flight", "username", "password", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["cadetID", 7], ["lastName", "Wells"], ["firstName", "Rachel"], ["email", "rwells3@tulane.edu"], ["phoneNumber", "1110002222"], ["school", "Tulane University"], ["position", "Cadet"], ["course", "GMC"], ["gradYear", 2020], ["flight", "Alpha"], ["username", "rwells3"], ["password", "pwd11"], ["created_at", "2019-10-03 19:15:36.160506"], ["updated_at", "2019-10-03 19:15:36.160506"]]
+  [1m[35m (12.7ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mCadet Create (0.2ms)[0m  [1m[32mINSERT INTO "cadets" ("cadetID", "lastName", "firstName", "email", "phoneNumber", "school", "position", "course", "gradYear", "flight", "username", "password", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["cadetID", 8], ["lastName", "Kurdia"], ["firstName", "Anastasia"], ["email", "akurdia@tulane.edu"], ["phoneNumber", "1111111111"], ["school", "Tulane University"], ["position", "Professor"], ["course", "POC"], ["gradYear", 2019], ["flight", "Bravo"], ["username", "akurdia"], ["password", "pwd11"], ["created_at", "2019-10-03 19:15:36.177424"], ["updated_at", "2019-10-03 19:15:36.177424"]]
+  [1m[35m (12.6ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mCadet Create (0.2ms)[0m  [1m[32mINSERT INTO "cadets" ("cadetID", "lastName", "firstName", "email", "phoneNumber", "school", "position", "course", "gradYear", "flight", "username", "password", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["cadetID", 9], ["lastName", "MyLast"], ["firstName", "myFirst"], ["email", "myName@tulane.edu"], ["phoneNumber", "1111111111"], ["school", "Tulane University"], ["position", "Cadet"], ["course", "GMC"], ["gradYear", 2022], ["flight", "Bravo"], ["username", "myName"], ["password", "pwd"], ["created_at", "2019-10-03 19:15:36.194228"], ["updated_at", "2019-10-03 19:15:36.194228"]]
+  [1m[35m (12.7ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mCadet Create (0.2ms)[0m  [1m[32mINSERT INTO "cadets" ("cadetID", "lastName", "firstName", "email", "phoneNumber", "school", "position", "course", "gradYear", "flight", "username", "password", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["cadetID", 10], ["lastName", "Cadet"], ["firstName", "sample"], ["email", "scadet@tulane.edu"], ["phoneNumber", "1119999111"], ["school", "Tulane University"], ["position", "Cadet"], ["course", "POC"], ["gradYear", 2023], ["flight", "Bravo"], ["username", "scadet"], ["password", "pwd11"], ["created_at", "2019-10-03 19:15:36.210623"], ["updated_at", "2019-10-03 19:15:36.210623"]]
+  [1m[35m (12.5ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mCadet Create (0.2ms)[0m  [1m[32mINSERT INTO "cadets" ("cadetID", "lastName", "firstName", "email", "phoneNumber", "school", "position", "course", "gradYear", "flight", "username", "password", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["cadetID", 11], ["lastName", "Sample"], ["firstName", "cadet"], ["email", "csample@tulane.edu"], ["phoneNumber", "1111111111"], ["school", "Tulane University"], ["position", "Cadet"], ["course", "POC"], ["gradYear", 2023], ["flight", "Bravo"], ["username", "csample"], ["password", "pwd11"], ["created_at", "2019-10-03 19:15:36.226756"], ["updated_at", "2019-10-03 19:15:36.226756"]]
+  [1m[35m (12.7ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mCadet Create (0.2ms)[0m  [1m[32mINSERT INTO "cadets" ("cadetID", "lastName", "firstName", "email", "phoneNumber", "school", "position", "course", "gradYear", "flight", "username", "password", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["cadetID", 12], ["lastName", "Lastly"], ["firstName", "firstly"], ["email", "flastly@tulane.edu"], ["phoneNumber", "111111111"], ["school", "Tulane University"], ["position", "Cadet"], ["course", "POC"], ["gradYear", 2022], ["flight", "Alpha"], ["username", "flastly"], ["password", "pwd11"], ["created_at", "2019-10-03 19:15:36.243028"], ["updated_at", "2019-10-03 19:15:36.243028"]]
+  [1m[35m (12.4ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mCadet Create (0.3ms)[0m  [1m[32mINSERT INTO "cadets" ("cadetID", "lastName", "firstName", "email", "phoneNumber", "school", "position", "course", "gradYear", "flight", "username", "password", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["cadetID", 13], ["lastName", "Studio"], ["firstName", "Software"], ["email", "sstudio@tulane.edu"], ["phoneNumber", "9999999999"], ["school", "Tulane University"], ["position", "Cadet"], ["course", "POC"], ["gradYear", 2022], ["flight", "Alpha"], ["username", "sstudio"], ["password", "pwd11"], ["created_at", "2019-10-03 19:15:36.259104"], ["updated_at", "2019-10-03 19:15:36.259104"]]
+  [1m[35m (14.2ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mCadet Create (0.2ms)[0m  [1m[32mINSERT INTO "cadets" ("cadetID", "lastName", "firstName", "email", "phoneNumber", "school", "position", "course", "gradYear", "flight", "username", "password", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["cadetID", 14], ["lastName", "mcFake"], ["firstName", "fake"], ["email", "ffake@tulane.edu"], ["phoneNumber", "1111111111"], ["school", "Tulane University"], ["position", "Cadet"], ["course", "POC"], ["gradYear", 2022], ["flight", "Alpha"], ["username", "ffake"], ["password", "pwd11"], ["created_at", "2019-10-03 19:15:36.277066"], ["updated_at", "2019-10-03 19:15:36.277066"]]
+  [1m[35m (12.6ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mCadet Create (0.2ms)[0m  [1m[32mINSERT INTO "cadets" ("cadetID", "lastName", "firstName", "email", "phoneNumber", "school", "position", "course", "gradYear", "flight", "username", "password", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["cadetID", 15], ["lastName", "Saathoff"], ["firstName", "Dustin"], ["email", "dsaathoff@tulane.edu"], ["phoneNumber", "1111111111"], ["school", "Tulane University"], ["position", "Cadet"], ["course", "GMC"], ["gradYear", 2022], ["flight", "Alpha"], ["username", "dsaathoff"], ["password", "pwd11"], ["created_at", "2019-10-03 19:15:36.293465"], ["updated_at", "2019-10-03 19:15:36.293465"]]
+  [1m[35m (12.6ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mCadet Create (0.2ms)[0m  [1m[32mINSERT INTO "cadets" ("cadetID", "lastName", "firstName", "email", "phoneNumber", "school", "position", "course", "gradYear", "flight", "username", "password", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["cadetID", 16], ["lastName", "Swindall"], ["firstName", "Allyson"], ["email", "aswindall@tulane.edu"], ["phoneNumber", "1111111111"], ["school", "Tulane University"], ["position", "Cadet"], ["course", "GMC"], ["gradYear", 2022], ["flight", "Bravo"], ["username", "aswindall"], ["password", "pwd11"], ["created_at", "2019-10-03 19:15:36.310353"], ["updated_at", "2019-10-03 19:15:36.310353"]]
+  [1m[35m (12.8ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mCadet Create (0.2ms)[0m  [1m[32mINSERT INTO "cadets" ("cadetID", "lastName", "firstName", "email", "phoneNumber", "school", "position", "course", "gradYear", "flight", "username", "password", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["cadetID", 17], ["lastName", "Zzz"], ["firstName", "y"], ["email", "yzzz@tulane.edu"], ["phoneNumber", "1111111111"], ["school", "Tulane University"], ["position", "Cadet"], ["course", "POC"], ["gradYear", 2022], ["flight", "Alpha"], ["username", "yzzz"], ["password", "pwd11"], ["created_at", "2019-10-03 19:15:36.326811"], ["updated_at", "2019-10-03 19:15:36.326811"]]
+  [1m[35m (12.8ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mCadet Create (0.2ms)[0m  [1m[32mINSERT INTO "cadets" ("cadetID", "lastName", "firstName", "email", "phoneNumber", "school", "position", "course", "gradYear", "flight", "username", "password", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["cadetID", 18], ["lastName", "Day"], ["firstName", "Jessica"], ["email", "jday@tulane.edu"], ["phoneNumber", "1111111111"], ["school", "Tulane University"], ["position", "Cadet"], ["course", "GMC"], ["gradYear", 2022], ["flight", "Bravo"], ["username", "jday"], ["password", "pwd11"], ["created_at", "2019-10-03 19:15:36.343031"], ["updated_at", "2019-10-03 19:15:36.343031"]]
+  [1m[35m (12.6ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mCadet Create (0.2ms)[0m  [1m[32mINSERT INTO "cadets" ("cadetID", "lastName", "firstName", "email", "phoneNumber", "school", "position", "course", "gradYear", "flight", "username", "password", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["cadetID", 19], ["lastName", "Miller"], ["firstName", "Nicholas"], ["email", "nmiller@tulane.edu"], ["phoneNumber", "1111111111"], ["school", "Tulane University"], ["position", "Cadet"], ["course", "GMC"], ["gradYear", 2022], ["flight", "Alpha"], ["username", "nmiller"], ["password", "pwd11"], ["created_at", "2019-10-03 19:15:36.359221"], ["updated_at", "2019-10-03 19:15:36.359221"]]
+  [1m[35m (12.6ms)[0m  [1m[36mcommit transaction[0m
+Started GET "/" for 129.81.36.45 at 2019-10-03 19:15:53 +0000
+Cannot render console from 129.81.36.45! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by CadetsController#index as HTML
+  Rendering cadets/index.html.erb within layouts/application
+  [1m[36mCadet Load (0.3ms)[0m  [1m[34mSELECT "cadets".* FROM "cadets"[0m
+  ↳ app/views/cadets/index.html.erb:16
+  Rendered cadets/index.html.erb within layouts/application (Duration: 28.6ms | Allocations: 13666)
+Completed 200 OK in 1834ms (Views: 1823.8ms | ActiveRecord: 0.9ms | Allocations: 1274075)
+
+
