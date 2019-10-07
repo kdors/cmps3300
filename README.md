@@ -1,4 +1,4 @@
-# ROTSee
+# ROTSee (Github Individual Assignment
 
 Developers: Kennedy Dorsey, Jessica Hotsko, Riley Juenemann, Olivia Nye
 
